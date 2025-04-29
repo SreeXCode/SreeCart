@@ -30,8 +30,8 @@ const productSchema = new mongoose.Schema({
     ],
     category: {
         type: String,
-        required: [true, "Please enter product category"],
-        enum: {
+        required: ["Please enter product category"],
+        // enum: {
             values: [
                 'Electronics',
                 'Mobile Phones',
@@ -47,7 +47,7 @@ const productSchema = new mongoose.Schema({
                 'Home'
             ],
             message: "Please select correct category"
-        }
+        // }
     },
     seller: {
         type: String,

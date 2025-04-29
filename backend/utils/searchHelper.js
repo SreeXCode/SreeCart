@@ -1,12 +1,14 @@
+// ✅ Build Search Query
 const getSearchQuery = (keyword, category, price) => {
     let query = {};
 
     // Keyword search (name, category, description)
-    if (keyword) {
+    if (keyword && keyword.trim()) {
+        const trimmedKeyword = keyword.trim();
         query.$or = [
-            { name: { $regex: keyword, $options: "i" } },
-            { category: { $regex: keyword, $options: "i" } },
-            { description: { $regex: keyword, $options: "i" } }
+            { name: { $regex: trimmedKeyword, $options: "i" } },
+            { category: { $regex: trimmedKeyword, $options: "i" } },
+            { description: { $regex: trimmedKeyword, $options: "i" } }
         ];
     }
 
@@ -15,24 +17,28 @@ const getSearchQuery = (keyword, category, price) => {
         query.category = { $regex: category, $options: "i" };
     }
 
-    // Price filter (supporting price[lt], price[gt], price[lte], price[gte])
+    // Price filter (handling lt, gt, lte, gte)
     if (price && Object.keys(price).length > 0) {
-        query.price = {};
-        if (price.lt) query.price.$lt = Number(price.lt);
-        if (price.gt) query.price.$gt = Number(price.gt);
-        if (price.lte) query.price.$lte = Number(price.lte);
-        if (price.gte) query.price.$gte = Number(price.gte);
+        let priceFilter = {};
+        if (price.lt) priceFilter.$lt = Number(price.lt);
+        if (price.gt) priceFilter.$gt = Number(price.gt);
+        if (price.lte) priceFilter.$lte = Number(price.lte);
+        if (price.gte) priceFilter.$gte = Number(price.gte);
+
+        if (Object.keys(priceFilter).length > 0) {
+            query.price = priceFilter;
+        }
     }
 
     return query;
 };
 
-// ✅ Pagination function (Fixed 2 products per page)
-const getPagination = (page, limit = 2) => {
-    const pageNumber = Number(page) || 1; // Default to page 1
-    const pageSize = limit; // ✅ Fixed limit to 2
-    const skip = (pageNumber - 1) * pageSize; // Calculate how many documents to skip
-    return { skip, limit: pageSize };
+// ✅ Pagination function (Fixed products per page)
+const getPagination = (pageNo, PagePerLimit ) => {
+    const pageNumber = Number(pageNo) // Default to page 1
+    const PagePerProduct = PagePerLimit ;
+    const skipProducts = (pageNumber - 1) * PagePerProduct; // Calculate how many documents to skip
+    return { skipProducts, PagePerProduct };
 };
 
 // ✅ Export functions properly

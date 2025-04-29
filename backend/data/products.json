@@ -1,117 +1,494 @@
 [
-    {
-        "name": "OPPO F21s Pro 5G",
-        "price": 245.67,
-        "description": "OPPO F21s Pro 5G is a powerful device with a RAM extension feature, that offers brilliant operational speed to users.",
-        "ratings": 4.5,
-        "images": [
-            {
-                "image": "/images/products/1.jpg"
-            },
-            {
-                "image": "/images/products/2.jpg"
-            }
-        ],
-        "category": "Mobile Phones",
-        "seller": "Amazon",
-        "stock": 5,
-        "numOfReviews": 15,
-        "reviews": []
-    },
-    {
-        "name": "WRISTIO HD, Bluetooth Calling Smart Watch",
-        "price": 150.32,
-        "description": "Minix watches are exclusively designed to fulfill the advanced tech needs of today’s generation.",
-        "ratings": 3.5,
-        "images": [
-            {
-                "image": "/images/products/2.jpg"
-            }
-        ],
-        "category": "Accessories",
-        "seller": "Flipkart",
-        "stock": 9,
-        "numOfReviews": 5,
-        "reviews": []
-    },
-    {
-        "name": "Dell Inspiron 3511 Laptop",
-        "price": 440.57,
-        "description": "Dell Inspiron 3511 11th Generation Intel Core i5-1135G7 Processor (8MB Cache, up to 4.2 GHz); Operating System: Windows 10 Home Single Language, English",
-        "ratings": 2,
-        "images": [
-            {
-                "image": "/images/products/3.jpg"
-            }
-        ],
-        "category": "Laptops",
-        "seller": "Ebay",
-        "stock": 9,
-        "numOfReviews": 12,
-        "reviews": []
-    },
-    {
-        "name": "Lenovo IdeaPad Slim 3 Laptop",
-        "price": 250.45,
-        "description": "Lenovo IdeaPad Slim 311th Gen Intel Core i5-1135G7 | Speed: 2.4 GHz (Base) - 4.2 GHz (Max) | 4 Cores | 8 Threads | 8 MB Cache",
-        "ratings": 4,
-        "images": [
-            {
-                "image": "/images/products/6.jpg"
-            }
-        ],
-        "category": "Laptops",
-        "seller": "Ebay",
-        "stock": 9,
-        "numOfReviews": 12,
-        "reviews": []
-    },
-    {
-        "name": "ASUS VivoBook 15 Laptop",
-        "price": 767.32,
-        "description": "ASUS VivoBook 15 15.6-inch (39.62 cm) HD, Dual Core Intel Celeron N4020, Thin and Light Laptop (4GB RAM/256GB SSD/Integrated Graphics/Windows 11 Home/Transparent Silver/1.8 Kg), X515MA-BR011W",
-        "ratings": 5,
-        "images": [
-            {
-                "image": "/images/products/7.jpg"
-            }
-        ],
-        "category": "Laptops",
-        "seller": "Ebay",
-        "stock": 9,
-        "numOfReviews": 12,
-        "reviews": []
-    },
-    {
-        "name": "PTron Newly Launched Tangent Sports, 60Hrs Playtime",
-        "price": 15.46,
-        "description": "Gigantic 60 + Hours of music playtime on a single charge; BT5.2 Wireless headphones with ENC (Environmental Noise Cancellation) Technology to enhance your voice quality over the voice calls",
-        "ratings": 5,
-        "images": [
-            {
-                "image": "/images/products/4.jpg"
-            }
-        ],
-        "category": "Headphone",
-        "seller": "Amazon",
-        "stock": 4,
-        "numOfReviews": 20,
-        "reviews": []
-    },
-    {
-        "name": "Campus Men's Maxico Running Shoes",
-        "price": 10.12,
-        "description": "The high raised back cover with extra padding.",
-        "ratings": 3,
-        "images": [
-            {
-                "image": "/images/products/5.jpg"
-            }
-        ],
-        "category": "Sports",
-        "seller": "Ebay",
-        "stock": 6,
-        "numOfReviews": 9,
-        "reviews": []
-    }
+  {
+    "name": "Realme GT 6",
+    "price": 25000.00,
+    "description": "Snapdragon 8+ Gen 2, 144Hz AMOLED, fast charging.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/images/products/Realme GT 6/realme1.jpg"
+      },
+      {
+        "image": "/images/products/Realme GT 6/realme2.jpg"
+      },
+      {
+        "image": "/images/products/Realme GT 6/realme3.jpg"
+      },
+      {
+        "image": "/images/products/Realme GT 6/realme4.jpg"
+      },
+      {
+        "image": "/images/products/Realme GT 6/realme5.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Realme",
+    "stock": 17,
+    "numOfReviews": 75,
+    "reviews": []
+  },
+  {
+    "name": "iQOO Neo 9 Pro",
+    "price": 29999.00,
+    "description": "Snapdragon 8 Gen 2, 120W charging, 6.78” AMOLED.",
+    "ratings": 4.6,
+    "images": [
+      {
+        "image": "/images/products/2.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "iQOO",
+    "stock": 9,
+    "numOfReviews": 143,
+    "reviews": []
+  },
+  {
+    "name": "Samsung Galaxy A15 5G",
+    "price": 18999.00,
+    "description": "MediaTek Dimensity 6100+, 90Hz Super AMOLED.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "image": "/images/products/3.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Samsung",
+    "stock": 11,
+    "numOfReviews": 87,
+    "reviews": []
+  },
+  {
+    "name": "POCO X6 Pro",
+    "price": 24999.00,
+    "description": "MediaTek Dimensity 8300 Ultra, 120Hz AMOLED.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/images/products/4.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "POCO",
+    "stock": 14,
+    "numOfReviews": 102,
+    "reviews": []
+  },
+  {
+    "name": "Motorola Edge 40 Neo",
+    "price": 23999.00,
+    "description": "Dimensity 7030, 144Hz pOLED display, IP68.",
+    "ratings": 4.3,
+    "images": [
+      {
+        "image": "/images/products/5.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Motorola",
+    "stock": 8,
+    "numOfReviews": 63,
+    "reviews": []
+  },
+  {
+    "name": "Redmi Note 13 Pro+ 5G",
+    "price": 31999.00,
+    "description": "Curved AMOLED, Dimensity 7200 Ultra, 200MP camera.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/images/products/6.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Redmi",
+    "stock": 5,
+    "numOfReviews": 91,
+    "reviews": []
+  },
+  {
+    "name": "OnePlus Nord CE 3",
+    "price": 22999.00,
+    "description": "Snapdragon 782G, 120Hz AMOLED, 80W charging.",
+    "ratings": 4.3,
+    "images": [
+      {
+        "image": "/images/products/7.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "OnePlus",
+    "stock": 6,
+    "numOfReviews": 117,
+    "reviews": []
+  },
+  {
+    "name": "Lava Blaze 5G",
+    "price": 11999.00,
+    "description": "Dimensity 6020, 90Hz LCD, 5000mAh battery.",
+    "ratings": 4.0,
+    "images": [
+      {
+        "image": "/images/products/8.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Lava",
+    "stock": 4,
+    "numOfReviews": 55,
+    "reviews": []
+  },
+  {
+    "name": "Infinix Zero 5G 2023",
+    "price": 14999.00,
+    "description": "Dimensity 920, 120Hz LCD, 5000mAh, 33W fast charge.",
+    "ratings": 4.1,
+    "images": [
+      {
+        "image": "/images/products/9.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Infinix",
+    "stock": 10,
+    "numOfReviews": 39,
+    "reviews": []
+  },
+  {
+    "name": "Tecno POVA 5 Pro",
+    "price": 14999.00,
+    "description": "Dimensity 6080, LED lighting back panel, 68W charging.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "image": "/images/products/10.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Tecno",
+    "stock": 3,
+    "numOfReviews": 28,
+    "reviews": []
+  },
+  {
+    "name": "Vivo T2 Pro 5G",
+    "price": 23999.00,
+    "description": "Dimensity 7200, AMOLED 120Hz, 64MP OIS camera.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/images/products/11.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Vivo",
+    "stock": 13,
+    "numOfReviews": 71,
+    "reviews": []
+  },
+  {
+    "name": "Samsung Galaxy M14 5G",
+    "price": 13999.00,
+    "description": "Exynos 1330, 90Hz PLS LCD, 6000mAh battery.",
+    "ratings": 4.1,
+    "images": [
+      {
+        "image": "/images/products/12.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Samsung",
+    "stock": 12,
+    "numOfReviews": 60,
+    "reviews": []
+  },
+  {
+    "name": "Realme Narzo 60 5G",
+    "price": 17999.00,
+    "description": "Dimensity 6020, 64MP camera, 90Hz AMOLED.",
+    "ratings": 4.3,
+    "images": [
+      {
+        "image": "/images/products/13.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Realme",
+    "stock": 7,
+    "numOfReviews": 46,
+    "reviews": []
+  },
+  {
+    "name": "iQOO Z7 5G",
+    "price": 15999.00,
+    "description": "Dimensity 920, AMOLED, 44W charging.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/images/products/14.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "iQOO",
+    "stock": 16,
+    "numOfReviews": 69,
+    "reviews": []
+  },
+  {
+    "name": "Moto G73 5G",
+    "price": 16999.00,
+    "description": "Dimensity 930, 120Hz LCD, clean Android experience.",
+    "ratings": 4.1,
+    "images": [
+      {
+        "image": "/images/products/15.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Motorola",
+    "stock": 15,
+    "numOfReviews": 51,
+    "reviews": []
+  },
+  {
+    "name": "Redmi 12 5G",
+    "price": 11999.00,
+    "description": "Snapdragon 4 Gen 2, 90Hz LCD, 5000mAh.",
+    "ratings": 4.0,
+    "images": [
+      {
+        "image": "/images/products/16.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Redmi",
+    "stock": 18,
+    "numOfReviews": 44,
+    "reviews": []
+  },
+  {
+    "name": "OnePlus Nord N20 SE",
+    "price": 13999.00,
+    "description": "Helio G35, 50MP dual camera, 33W SuperVOOC.",
+    "ratings": 3.9,
+    "images": [
+      {
+        "image": "/images/products/17.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "OnePlus",
+    "stock": 5,
+    "numOfReviews": 33,
+    "reviews": []
+  },
+  {
+    "name": "Lava Agni 2 5G",
+    "price": 21999.00,
+    "description": "Dimensity 7050, curved AMOLED, 66W fast charging.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "image": "/images/products/18.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Lava",
+    "stock": 9,
+    "numOfReviews": 40,
+    "reviews": []
+  },
+  {
+    "name": "Vivo Y200e 5G",
+    "price": 16999.00,
+    "description": "Snapdragon 4 Gen 2, 120Hz AMOLED, 5000mAh battery.",
+    "ratings": 4.3,
+    "images": [
+      {
+        "image": "/images/products/19.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Vivo",
+    "stock": 2,
+    "numOfReviews": 26,
+    "reviews": []
+  },
+  {
+    "name": "Infinix GT 10 Pro",
+    "price": 18999.00,
+    "description": "Dimensity 8050, 120Hz AMOLED, Cyberpunk design.",
+    "ratings": 4.1,
+    "images": [
+      {
+        "image": "/images/products/20.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Infinix",
+    "stock": 3,
+    "numOfReviews": 37,
+    "reviews": []
+  },
+  {
+    "name": "Apple iPhone 7",
+    "price": 24999.00,
+    "description": "A classic smartphone with a sharp Retina HD display and A10 Fusion chip.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "image": "/images/iphones/iphone 7.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Apple",
+    "stock": 15,
+    "numOfReviews": 85,
+    "reviews": []
+  },
+  {
+    "name": "Apple iPhone 8",
+    "price": 29999.00,
+    "description": "A sleek smartphone featuring wireless charging and enhanced camera performance.",
+    "ratings": 4.3,
+    "images": [
+      {
+        "image": "/images/iphones/iphone 8.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Apple",
+    "stock": 12,
+    "numOfReviews": 95,
+    "reviews": []
+  },
+  {
+    "name": "Apple iPhone 9",
+    "price": 34999.00,
+    "description": "An upgraded device combining powerful performance with classic design.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/images/iphones/iphone 9.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Apple",
+    "stock": 8,
+    "numOfReviews": 100,
+    "reviews": []
+  },
+  {
+    "name": "Apple iPhone 10",
+    "price": 49999.00,
+    "description": "A powerful smartphone with a stunning Retina display and Face ID.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/images/iphones/iphone 10.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Apple",
+    "stock": 10,
+    "numOfReviews": 120,
+    "reviews": []
+  },
+  {
+    "name": "Apple iPhone 11",
+    "price": 54999.00,
+    "description": "Improved cameras and A13 Bionic chip for faster performance.",
+    "ratings": 4.6,
+    "images": [
+      {
+        "image": "/images/iphones/iphone 11.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Apple",
+    "stock": 8,
+    "numOfReviews": 150,
+    "reviews": []
+  },
+  {
+    "name": "Apple iPhone 12",
+    "price": 64999.00,
+    "description": "OLED display and 5G speed in a sleek, durable design.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "image": "/images/iphones/iphone 12.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Apple",
+    "stock": 12,
+    "numOfReviews": 180,
+    "reviews": []
+  },
+  {
+    "name": "Apple iPhone 13",
+    "price": 69999.00,
+    "description": "Advanced dual-camera system and lightning-fast A15 Bionic chip.",
+    "ratings": 4.8,
+    "images": [
+      {
+        "image": "/images/iphones/iphone 13.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Apple",
+    "stock": 15,
+    "numOfReviews": 220,
+    "reviews": []
+  },
+  {
+    "name": "Apple iPhone 14",
+    "price": 74999.00,
+    "description": "Enhanced battery life, crash detection, and new safety features.",
+    "ratings": 4.9,
+    "images": [
+      {
+        "image": "/images/iphones/iphone 14.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Apple",
+    "stock": 20,
+    "numOfReviews": 300,
+    "reviews": []
+  },
+  {
+    "name": "Apple iPhone 15",
+    "price": 70000.00,
+    "description": "Dynamic Island, 48MP camera, and next-gen performance.",
+    "ratings": 5.0,
+    "images": [
+      {
+        "image": "/images/iphones/iphone 15.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Apple",
+    "stock": 18,
+    "numOfReviews": 400,
+    "reviews": []
+  },
+  {
+    "name": "Apple iPhone 16",
+    "price": 79999.00,
+    "description": "Dynamic Island, 48MP camera, and next-gen performance.",
+    "ratings": 5.0,
+    "images": [
+      {
+        "image": "/images/iphones/iphone 16.jpg"
+      }
+    ],
+    "category": "Smartphones",
+    "seller": "Apple",
+    "stock": 18,
+    "numOfReviews": 400,
+    "reviews": []
+  }
 ]

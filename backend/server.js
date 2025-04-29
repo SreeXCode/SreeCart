@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const path = require('path');
 const cookieParser = require("cookie-parser");
+const cors = require('cors');
 const { isAuthenticatedUser, authorizeRoles } = require("./middlewares/authenticate"); // Import middleware
 
 const connectDatabase = require('./config/database'); // import the database connection
@@ -16,6 +17,14 @@ const { getSearchQuery, getPagination } = require('./utils/searchHelper');
 
 dotenv.config({ path: path.join(__dirname, "config/config.env") })
 const app = express();
+
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    credentials: true, // <- this is important!
+};
+
+app.use(cors(corsOptions));
+
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
@@ -36,40 +45,39 @@ app.post('/admin/product/new', isAuthenticatedUser, authorizeRoles("admin"), asy
 });
 
 // Get All Products
-app.get('/products', isAuthenticatedUser, async (req, res) => {
+app.get('/products', async (req, res) => {
     try {
-        const { keyword, category, price, page } = req.query;
-
-        // Convert price query params into an object
-        let priceFilter = {};
-        if (price) {
-            if (price.lt) priceFilter.lt = Number(price.lt);
-            if (price.gt) priceFilter.gt = Number(price.gt);
-            if (price.lte) priceFilter.lte = Number(price.lte);
-            if (price.gte) priceFilter.gte = Number(price.gte);
-        }
-
-        console.log("Keyword:", keyword, "Category:", category, "Price:", priceFilter, "Page:", page);
+        const { keyword, category, price, pageNo = 1 } = req.query;
 
         // Generate the search query
-        const searchQuery = getSearchQuery(keyword, category, priceFilter);
+        const searchQuery = getSearchQuery(keyword, category, price);
 
-        // ✅ Pagination (2 items per page)
-        const { skip, limit } = getPagination(page, 2); // Fixed limit to 2
+        // ✅ Pagination (8 items per page) Next page that 8 items skip
+        const PagePerLimit = 8
+        const { skipProducts, PagePerProduct } = getPagination(pageNo, PagePerLimit);
 
         // Fetch products with pagination
-        const products = await Product.find(searchQuery).skip(skip).limit(limit);
+        const products = await Product.find(searchQuery).skip(skipProducts).limit(PagePerProduct);
 
         // Get total count of matching products
-        const totalProducts = await Product.countDocuments(searchQuery);
-        const totalPages = Math.ceil(totalProducts / limit);
+        const FilteredProductsCount = await Product.countDocuments(searchQuery);
+        const TotalProductsCount = await Product.countDocuments({});
+        let ProductsCount = TotalProductsCount;
+
+        if (FilteredProductsCount !== TotalProductsCount) {
+            ProductsCount = FilteredProductsCount
+        }
+
+        // total pages
+        const totalPages = Math.ceil(ProductsCount / PagePerProduct);
+        console.log(totalPages)
 
         res.status(200).json({
             success: true,
-            count: products.length,
-            totalProducts,
+            count: ProductsCount,
+            resPerPage: PagePerProduct,
+            currentPage: Number(pageNo),
             totalPages,
-            currentPage: Number(page) || 1,
             products: products
         });
     } catch (error) {
@@ -77,7 +85,6 @@ app.get('/products', isAuthenticatedUser, async (req, res) => {
         res.status(500).json({ success: false, message: error.message });
     }
 });
-
 
 // Get Single Product
 app.get('/product/:id', async (req, res) => {
@@ -232,7 +239,7 @@ app.post('/login', async (req, res) => {
         res.status(200).json({
             success: true,
             message: "Login successful!",
-            user
+            user,
         });
 
 
@@ -848,7 +855,7 @@ app.get('/reviews', async (req, res) => {
 app.delete('/review', async (req, res) => {
     try {
         const product = await Product.findById(req.query.productId);
-        
+
         if (!product) {
             return res.status(404).json({ success: false, message: "Product not found" });
         }
@@ -860,10 +867,10 @@ app.delete('/review', async (req, res) => {
         const numOfReviews = reviews.length;
 
         // Recalculate the average rating
-        let ratings = reviews.reduce((acc,review)=>{
-            return review.rating + acc ;
-        },0) / reviews.length 
-           
+        let ratings = reviews.reduce((acc, review) => {
+            return review.rating + acc;
+        }, 0) / reviews.length
+
 
         // Ensure ratings don't become NaN
         ratings = isNaN(ratings) ? 0 : ratings;
