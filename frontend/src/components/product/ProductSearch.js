@@ -20,60 +20,38 @@ function ProductSearch() {
     }
 
     useEffect(() => {
+        const handleKeywordChange = async () => {
+            // Optional: await something here
+            setCurrentPage(1);
+        };
+        handleKeywordChange();
+    }, [keyword]);
+    
+
+    useEffect(() => {
         const fetchProducts = async () => {
             try {
                 setLoading(true);
-    
-                // If keyword changes, reset page first before fetching
-                const pageNo = 1;
-                setCurrentPage(pageNo);
-    
-                const response = await axios.get(`http://localhost:8000/products?keyword=${keyword}&pageNo=${pageNo}`, {
+
+                const response = await axios.get(`http://localhost:8000/products?keyword=${keyword}&pageNo=${currentPage}`, {
                     withCredentials: true
                 });
-    
+
                 console.log('response', response.data);
-    
+
                 setProducts(response.data.products);
                 setProductCount(response.data.count);
                 setResPerPage(response.data.resPerPage);
-    
+
             } catch (error) {
                 setError(error.message || 'Something went wrong');
             } finally {
                 setLoading(false);
             }
         };
-    
+
         fetchProducts();
-    }, [keyword]);  // ✅ only depend on keyword here
-    
-    useEffect(() => {
-        if (currentPage !== 1) {
-            const fetchProducts = async () => {
-                try {
-                    setLoading(true);
-    
-                    const response = await axios.get(`http://localhost:8000/products?keyword=${keyword}&pageNo=${currentPage}`, {
-                        withCredentials: true
-                    });
-    
-                    console.log('response', response.data);
-    
-                    setProducts(response.data.products);
-                    setProductCount(response.data.count);
-                    setResPerPage(response.data.resPerPage);
-    
-                } catch (error) {
-                    setError(error.message || 'Something went wrong');
-                } finally {
-                    setLoading(false);
-                }
-            };
-    
-            fetchProducts();
-        }
-    }, [currentPage]);  // ✅ only depend on currentPage here
+    }, [keyword, currentPage]);
     
 
     return (

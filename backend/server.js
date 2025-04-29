@@ -5,6 +5,8 @@ const dotenv = require('dotenv');
 const path = require('path');
 const cookieParser = require("cookie-parser");
 const cors = require('cors');
+
+
 const { isAuthenticatedUser, authorizeRoles } = require("./middlewares/authenticate"); // Import middleware
 
 const connectDatabase = require('./config/database'); // import the database connection
@@ -45,9 +47,14 @@ app.post('/admin/product/new', isAuthenticatedUser, authorizeRoles("admin"), asy
 });
 
 // Get All Products
+const qs = require('qs');// Query String ➜ Object (Parsing)
+app.set('query parser', str => qs.parse(str));
+
 app.get('/products', async (req, res) => {
     try {
-        const { keyword, category, price, pageNo = 1 } = req.query;
+
+        const { keyword, category, price, pageNo } = req.query;
+        console.log("Parsed price query:", price); // should be { gte: "50000" }
 
         // Generate the search query
         const searchQuery = getSearchQuery(keyword, category, price);
@@ -70,7 +77,6 @@ app.get('/products', async (req, res) => {
 
         // total pages
         const totalPages = Math.ceil(ProductsCount / PagePerProduct);
-        console.log(totalPages)
 
         res.status(200).json({
             success: true,

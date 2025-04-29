@@ -1,15 +1,29 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Search() {
 
     const navigate = useNavigate()
+    const location = useLocation()
     const [keyword,setKeyword] = useState("")
 
     const searchHandler = (e) => {
         e.preventDefault();
         navigate(`/search/${keyword}`)
     }
+
+    const clearKeyword = () =>{
+        setKeyword("")
+    }
+
+    useEffect(() => {
+        const pathParts = location.pathname.split("/");
+        
+        // If the route is not exactly /search/:something, clear the keyword
+        if (!(pathParts[1] === "search" && pathParts[2])) {
+            setKeyword("");
+        }
+    }, [location]);
 
     return (
         <>
