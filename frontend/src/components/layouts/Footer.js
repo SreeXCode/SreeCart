@@ -1,8 +1,6 @@
-
-
 function Footer() {
   return (
-    <footer className="text-center py-3 border-top mt-auto">
+    <footer className="text-center py-3 border-top" style={{ marginBottom: 0, paddingBottom: 0 }}>
       <p className="mb-0 text-light">
         &copy; Sree Cart {new Date().getFullYear()}, All Rights Reserved.
       </p>

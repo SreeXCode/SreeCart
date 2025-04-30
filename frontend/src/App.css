@@ -33,6 +33,24 @@ body {
 .carousel-control-next-icon {
   background-color: blue;
 }
+/* custom-slider.css */
+.rc-slider-track {
+  background-color: #ffc107 !important; /* yellow track */
+}
+
+.rc-slider-handle {
+  border: solid 2px #ffc107 !important; /* yellow handle */
+  background-color: black !important;
+  width: 20px !important;       /* adjust width */
+  height: 20px !important;      /* adjust height */
+  margin-top: -8px !important;  /* adjust vertical alignment */
+  border-color: #ffc107 !important;
+}
+
+.rc-slider-rail {
+  background-color: gray !important; /* light grey rail */
+}
+
 
 nav {
   background-color: #232f3e;

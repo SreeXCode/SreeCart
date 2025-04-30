@@ -1,7 +1,7 @@
 // ✅ Build Search Query
 const getSearchQuery = (keyword, category, price) => {
     let query = {};
-
+    
     // Keyword search (name, category, description)
     if (keyword && keyword.trim()) {
         const trimmedKeyword = keyword.trim();
@@ -13,8 +13,9 @@ const getSearchQuery = (keyword, category, price) => {
     }
 
     // Category filter
-    if (category) {
-        query.category = { $regex: category, $options: "i" };
+     // ✅ Exact category match (required due to enum)
+     if (category && category.trim()) {
+        query.category = category.trim();
     }
 
     // Price filter (handling lt, gt, lte, gte)

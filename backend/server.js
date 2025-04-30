@@ -51,10 +51,10 @@ const qs = require('qs');// Query String ➜ Object (Parsing)
 app.set('query parser', str => qs.parse(str));
 
 app.get('/products', async (req, res) => {
-    try {
-
+    try { 
+        
         const { keyword, category, price, pageNo } = req.query;
-        console.log("Parsed price query:", price); // should be { gte: "50000" }
+        console.log('req.query',req.query); // should be { gte: "50000" }
 
         // Generate the search query
         const searchQuery = getSearchQuery(keyword, category, price);
