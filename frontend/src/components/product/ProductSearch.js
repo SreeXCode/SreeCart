@@ -22,7 +22,7 @@ function ProductSearch() {
     const [priceRange, setPriceRange] = useState([10000, 100000]);  // Actual filter used in API
     const [tempPriceRange, setTempPriceRange] = useState([10000, 100000]);  // Live slider value
 
-    const categories = ['Smart Phones', 'Laptops', 'Television', 'Smart Watch', 'Ear Buds'];
+    const categories = ['Smart Phones','Laptops','Television','Smart Watch','Ear Buds','Keypad Phones','Bluetooth Speaker'];
     const [selectedCategory, setSelectedCategory] = useState(''); // Track selected category
     // Function to handle category click
     const handleCategoryClick = (category) => {
@@ -136,7 +136,7 @@ function ProductSearch() {
 
                                 {/* Category Filter */}
                                 <div className="container-fluid">
-                                    <h3 className="text-center">Categories</h3>
+                                    <h3 className="text-center mt-4">Filter by Category</h3>
                                     <ul>
                                         {categories.map((category, index) => (
                                             <li
@@ -149,6 +149,7 @@ function ProductSearch() {
                                         ))}
                                     </ul>
                                 </div>
+                                <hr className="mt-4 border border-warning" />
                             </div>
 
                             {/* Column 2: Product List */}

@@ -29,7 +29,7 @@ function Home() {
                 const response = await axios.get(`http://localhost:8000/products?pageNo=${currentPage}`, {
                     withCredentials: true
                 });
-        
+
                 console.log('response', response.data)
                 setProducts(response.data.products);
                 setProductCount(response.data.count); // <-- NEW
@@ -43,7 +43,7 @@ function Home() {
         };
 
         fetchProducts();
-    },[currentPage]);
+    }, [currentPage]);
 
 
     return (
@@ -65,35 +65,37 @@ function Home() {
                 ) : error ? (
                     <h2>Error: {error}</h2>
                 ) : (
-                    <div className="row">
-                        {products.map((product) => (
-                            <div className="col-sm-12 col-md-6 col-lg-3 my-3" key={product._id}>
-                                <div className="card p-3 rounded">
-                                    <img
-                                        className="card-img-top mx-auto"
-                                        src={product.images[0].image}
-                                        alt={product.name}
+                    <div className='container-fluid'>
+                        <div className="row wrapper">
+                            {products.map((product) => (
+                                <div className="col-sm-12 col-md-6 col-lg-3 my-3" key={product._id}>
+                                    <div className="card p-3 rounded">
+                                        <img
+                                            className="card-img-top mx-auto"
+                                            src={product.images[0].image}
+                                            alt={product.name}
 
-                                    />
-                                    <div className="card-body d-flex flex-column">
-                                        <h5 className="card-title">
-                                            <Link to={`/product/${product._id}`}> {product.name} </Link>
-                                        </h5>
-                                        <div className="ratings mt-auto">
-                                            <div className="rating-outer">
-                                                <div className="rating-inner" style={{ width: `${(product.ratings / 5) * 100}%` }}></div>
+                                        />
+                                        <div className="card-body d-flex flex-column">
+                                            <h5 className="card-title">
+                                                <Link to={`/product/${product._id}`}> {product.name} </Link>
+                                            </h5>
+                                            <div className="ratings mt-auto">
+                                                <div className="rating-outer">
+                                                    <div className="rating-inner" style={{ width: `${(product.ratings / 5) * 100}%` }}></div>
+                                                </div>
+                                                <span id="no_of_reviews">({product.numOfReviews} Reviews)</span>
                                             </div>
-                                            <span id="no_of_reviews">({product.numOfReviews} Reviews)</span>
-                                        </div>
-                                        <p className="card-text">₹{product.price}</p>
-                                        <Link to={`/product/${product._id}`} id="view_btn" className="btn btn-block">
-                                            View Details
-                                        </Link>
+                                            <p className="card-text">₹{product.price}</p>
+                                            <Link to={`/product/${product._id}`} id="view_btn" className="btn btn-block">
+                                                View Details
+                                            </Link>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 )}
             </section>
@@ -110,8 +112,6 @@ function Home() {
                         lastPageText={'Last'}
                         itemClass={'page-item'} // bootstap class
                         linkClass={'page-link'} // bootstap class
-
-
                     />
                 </div> : null}
         </>

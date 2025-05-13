@@ -490,5 +490,978 @@
     "stock": 18,
     "numOfReviews": 400,
     "reviews": []
+  },
+   
+  {
+    "name": "Motorola Moto Book 60 (Intel Core i5)",
+    "price": 61999.00,
+    "description": "14\" 2.8K OLED display, Intel Core i5, 16GB DDR5 RAM, 512GB SSD, Intel Arc GPU, Windows 11, Pantone Bronze Green/Wedgewood colors.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/images/laptops/moto_book_60.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Motorola",
+    "stock": 15,
+    "numOfReviews": 120,
+    "reviews": []
+  },
+  {
+    "name": "Asus TUF Gaming A16 Advantage Edition FA617NSR-RL083W",
+    "price": 79990.00,
+    "description": "16\" FHD display, AMD Ryzen 7 7435HS, 16GB DDR5 RAM, 512GB SSD, 8GB AMD Radeon RX 7600S GPU, Windows 11.",
+    "ratings": 4.6,
+    "images": [
+      {
+        "image": "/images/laptops/asus_tuf_a16.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Asus",
+    "stock": 18,
+    "numOfReviews": 95,
+    "reviews": []
+  },
+  {
+    "name": "HP Victus 16-s0089AX",
+    "price": 74990.00,
+    "description": "16.1\" FHD display, AMD Ryzen 7 7840HS, 16GB DDR5 RAM, 1TB SSD, 6GB NVIDIA GeForce RTX 3050 GPU, Windows 11.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/images/laptops/hp_victus_16.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "HP",
+    "stock": 12,
+    "numOfReviews": 110,
+    "reviews": []
+  },
+  {
+    "name": "MSI Thin 15 B12VE-1688IN",
+    "price": 79990.00,
+    "description": "15.6\" FHD display, Intel Core i7 12650H, 16GB DDR4 RAM, 512GB SSD, 6GB NVIDIA GeForce RTX 4050 GPU, Windows 11.",
+    "ratings": 4.3,
+    "images": [
+      {
+        "image": "/images/laptops/msi_thin_15.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "MSI",
+    "stock": 10,
+    "numOfReviews": 85,
+    "reviews": []
+  },
+  {
+    "name": "Acer Nitro V ANV15-41 NH.QPESI.001",
+    "price": 73999.00,
+    "description": "15.6\" FHD display, AMD Ryzen 7 7735HS, 16GB DDR5 RAM, 512GB SSD, 6GB NVIDIA GeForce RTX 4050 GPU, Windows 11.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/images/laptops/acer_nitro_v.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Acer",
+    "stock": 14,
+    "numOfReviews": 90,
+    "reviews": []
+  },
+  {
+    "name": "HP Envy x360 15-fe0014TU",
+    "price": 79999.00,
+    "description": "15.6\" FHD touchscreen, Intel Core i7 13th Gen, 16GB DDR4 RAM, 1TB SSD, Intel Iris Xe Graphics, Windows 11.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "image": "/images/laptops/hp_envy_x360.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "HP",
+    "stock": 9,
+    "numOfReviews": 130,
+    "reviews": []
+  },
+  {
+    "name": "Apple MacBook Air M2 (2025 Edition)",
+    "price": 79900.00,
+    "description": "13.6\" Liquid Retina display, Apple M2 chip, 8GB Unified Memory, 512GB SSD, macOS Ventura, up to 18 hours battery life.",
+    "ratings": 4.8,
+    "images": [
+      {
+        "image": "/images/laptops/macbook_air_m2.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Apple",
+    "stock": 8,
+    "numOfReviews": 200,
+    "reviews": []
+  },
+  {
+    "name": "Lenovo Legion 5",
+    "price": 78999.00,
+    "description": "15.6\" FHD IPS display, AMD Ryzen 7 5800H, 16GB DDR4 RAM, 512GB SSD, 4GB NVIDIA GeForce RTX 3050Ti GPU, Windows 11.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/images/laptops/lenovo_legion_5.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Lenovo",
+    "stock": 11,
+    "numOfReviews": 105,
+    "reviews": []
+  },
+  {
+    "name": "Honor MagicBook Pro",
+    "price": 76999.00,
+    "description": "16.1\" FHD IPS display, AMD Ryzen 7 5800H, 16GB DDR4 RAM, 1TB SSD, AMD Radeon Vega Graphics, Windows 11.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "image": "/images/laptops/honor_magicbook_pro.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Honor",
+    "stock": 13,
+    "numOfReviews": 80,
+    "reviews": []
+  },
+  {
+    "name": "Xiaomi Mi Notebook Ultra 2",
+    "price": 75999.00,
+    "description": "15.6\" 3.2K IPS display, Intel Core i7 12th Gen, 16GB LPDDR4X RAM, 512GB SSD, Intel Iris Xe Graphics, Windows 11.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/images/laptops/mi_notebook_ultra_2.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Xiaomi",
+    "stock": 17,
+    "numOfReviews": 95,
+    "reviews": []
+  },
+   
+  {
+    "name": "Samsung Neo QLED 8K QN900D",
+    "price": 319990.00,
+    "description": "85-inch 8K Mini LED display, NQ8 AI Gen 3 processor, AI Picture Technology, AI Sound Technology, Real Depth Enhancer Pro, Object Tracking Sound Pro, Adaptive Sound Pro, AI Auto Game Mode.",
+    "ratings": 4.9,
+    "images": [
+      {
+        "image": "/images/televisions/samsung_qn900d.jpg"
+      }
+    ],
+    "category": "Television",
+    "seller": "Samsung",
+    "stock": 5,
+    "numOfReviews": 150,
+    "reviews": []
+  },
+  {
+    "name": "Samsung Crystal 4K Dynamic Smart TV (2024)",
+    "price": 41990.00,
+    "description": "43-inch 4K UHD display, AirSlim design, 4K upscaling, Dynamic Crystal Color, Multi-Voice Assistant, HDR support.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/images/televisions/samsung_crystal_4k_dynamic.jpg"
+      }
+    ],
+    "category": "Television",
+    "seller": "Samsung",
+    "stock": 12,
+    "numOfReviews": 100,
+    "reviews": []
+  },
+  {
+    "name": "Samsung QLED 4K TV (2024)",
+    "price": 65990.00,
+    "description": "55-inch 4K QLED display, Quantum Processor Lite 4K, Quantum Dot technology, Quantum HDR, AirSlim design, SolarCell Remote, AI Energy Mode, Q-Symphony, OTS Lite, Adaptive Sound.",
+    "ratings": 4.6,
+    "images": [
+      {
+        "image": "/images/televisions/samsung_qled_4k_2024.jpg"
+      }
+    ],
+    "category": "Television",
+    "seller": "Samsung",
+    "stock": 10,
+    "numOfReviews": 90,
+    "reviews": []
+  },
+  {
+    "name": "Redmi Smart Fire TV 32 (2024)",
+    "price": 11999.00,
+    "description": "32-inch HD-Ready display (1366x768), Vivid Picture Engine, Fire TV OS, Auto Low Latency Mode, 6.5ms response time, 20W speakers, Dolby Audio, DTS-HD, Virtual X, Alexa support.",
+    "ratings": 4.3,
+    "images": [
+      {
+        "image": "/images/televisions/redmi_smart_fire_tv_32_2024.jpg"
+      }
+    ],
+    "category": "Television",
+    "seller": "Redmi",
+    "stock": 15,
+    "numOfReviews": 80,
+    "reviews": []
+  },
+  {
+    "name": "Xiaomi Smart TV A Series 43 (2024)",
+    "price": 24999.00,
+    "description": "43-inch Full HD display, PatchWall with IMDb integration, Google Assistant, Chromecast built-in, DTS-HD audio, 20W speakers.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/images/televisions/xiaomi_smart_tv_a_series_43_2024.jpg"
+      }
+    ],
+    "category": "Television",
+    "seller": "Xiaomi",
+    "stock": 18,
+    "numOfReviews": 95,
+    "reviews": []
+  },
+  {
+    "name": "TCL QM8 Mini LED TV",
+    "price": 89990.00,
+    "description": "65-inch 4K Mini LED display, 144Hz refresh rate, Dolby Vision, HDR10+, 2000 nits peak brightness, 2300 local dimming zones, Game Accelerator 240, Google TV.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "image": "/images/televisions/tcl_qm8_mini_led.jpg"
+      }
+    ],
+    "category": "Television",
+    "seller": "TCL",
+    "stock": 9,
+    "numOfReviews": 110,
+    "reviews": []
+  },
+  {
+    "name": "Sony Bravia 9 Mini LED TV",
+    "price": 199990.00,
+    "description": "65-inch 4K Mini LED display, Cognitive Processor XR, XR Triluminos Pro, XR Contrast Booster, Google TV, Dolby Vision, Dolby Atmos.",
+    "ratings": 4.8,
+    "images": [
+      {
+        "image": "/images/televisions/sony_bravia_9_mini_led.jpg"
+      }
+    ],
+    "category": "Television",
+    "seller": "Sony",
+    "stock": 7,
+    "numOfReviews": 85,
+    "reviews": []
+  },
+  {
+    "name": "Hisense U8N QLED TV",
+    "price": 74990.00,
+    "description": "65-inch 4K QLED display, Mini LED backlight, Quantum Dot Color, Dolby Vision IQ, Dolby Atmos, Game Mode Pro, Google TV.",
+    "ratings": 4.6,
+    "images": [
+      {
+        "image": "/images/televisions/hisense_u8n_qled.jpg"
+      }
+    ],
+    "category": "Television",
+    "seller": "Hisense",
+    "stock": 11,
+    "numOfReviews": 70,
+    "reviews": []
+  },
+  {
+    "name": "LG G4 OLED TV",
+    "price": 279990.00,
+    "description": "65-inch 4K OLED display, α9 AI Processor Gen6, Brightness Booster Max, Dolby Vision, Dolby Atmos, NVIDIA G-SYNC, FreeSync Premium, WebOS 23.",
+    "ratings": 4.9,
+    "images": [
+      {
+        "image": "/images/televisions/lg_g4_oled.jpg"
+      }
+    ],
+    "category": "Television",
+    "seller": "LG",
+    "stock": 6,
+    "numOfReviews": 100,
+    "reviews": []
+  },
+  {
+    "name": "Panasonic Z95A OLED TV",
+    "price": 299990.00,
+    "description": "65-inch 4K OLED display, HCX Pro AI Processor, Master OLED Pro panel, Dolby Vision IQ, Dolby Atmos, Filmmaker Mode, My Home Screen 8.0.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "image": "/images/televisions/panasonic_z95a_oled.jpg"
+      }
+    ],
+    "category": "Television",
+    "seller": "Panasonic",
+    "stock": 8,
+    "numOfReviews": 60,
+    "reviews": []
+  },
+   
+  {
+    "name": "Apple Watch Series 9 GPS 45mm",
+    "price": 43990.00,
+    "description": "Always-On Retina display, S9 SiP chip, Blood Oxygen app, ECG app, Sleep tracking, IP6X water resistance, WatchOS 10.",
+    "ratings": 4.8,
+    "images": [
+      {
+        "image": "/images/smartwatches/apple_watch_series_9.jpg"
+      }
+    ],
+    "category": "Smart Watch",
+    "seller": "Apple",
+    "stock": 20,
+    "numOfReviews": 210,
+    "reviews": []
+  },
+  {
+    "name": "Samsung Galaxy Watch6 Classic LTE 47mm",
+    "price": 38999.00,
+    "description": "Super AMOLED display, Rotating bezel, BioActive Sensor, Sleep coaching, Body composition analysis, ECG monitoring, Wear OS powered by Samsung.",
+    "ratings": 4.6,
+    "images": [
+      {
+        "image": "/images/smartwatches/samsung_watch6_classic.jpg"
+      }
+    ],
+    "category": "Smart Watch",
+    "seller": "Samsung",
+    "stock": 20,
+    "numOfReviews": 180,
+    "reviews": []
+  },
+  {
+    "name": "Amazfit GTR 4",
+    "price": 16999.00,
+    "description": "1.43-inch AMOLED display, Dual-band GPS, 150+ sports modes, 24-hour heart rate, SpO2, stress monitoring, Alexa built-in, 14-day battery life.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/images/smartwatches/amazfit_gtr_4.jpg"
+      }
+    ],
+    "category": "Smart Watch",
+    "seller": "Amazfit",
+    "stock": 20,
+    "numOfReviews": 130,
+    "reviews": []
+  },
+  {
+    "name": "boAt Wave Sigma",
+    "price": 1499.00,
+    "description": "2.01-inch HD display, Bluetooth calling, 700+ active modes, heart rate monitor, SpO2, IP67, weather updates, custom watch faces.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "image": "/images/smartwatches/boat_wave_sigma.jpg"
+      }
+    ],
+    "category": "Smart Watch",
+    "seller": "boAt",
+    "stock": 20,
+    "numOfReviews": 95,
+    "reviews": []
+  },
+  {
+    "name": "Noise ColorFit Ultra 3",
+    "price": 3499.00,
+    "description": "1.96-inch AMOLED display, Always-On Display, Bluetooth calling, 100+ sports modes, heart rate, SpO2 monitoring, IP68 rating.",
+    "ratings": 4.3,
+    "images": [
+      {
+        "image": "/images/smartwatches/noise_colorfit_ultra_3.jpg"
+      }
+    ],
+    "category": "Smart Watch",
+    "seller": "Noise",
+    "stock": 20,
+    "numOfReviews": 120,
+    "reviews": []
+  },
+  {
+    "name": "Fire-Boltt Quantum",
+    "price": 2499.00,
+    "description": "1.28-inch AMOLED display, metallic body, Bluetooth calling, AI voice assistant, SpO2, heart rate sensor, IP67 water resistance.",
+    "ratings": 4.1,
+    "images": [
+      {
+        "image": "/images/smartwatches/fireboltt_quantum.jpg"
+      }
+    ],
+    "category": "Smart Watch",
+    "seller": "Fire-Boltt",
+    "stock": 20,
+    "numOfReviews": 75,
+    "reviews": []
+  },
+  {
+    "name": "OnePlus Watch 2",
+    "price": 24999.00,
+    "description": "1.43-inch AMOLED display, Dual-Engine Architecture, 100+ sports modes, Wear OS by Google, Snapdragon W5 Gen 1, 100-hour battery.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/images/smartwatches/oneplus_watch_2.jpg"
+      }
+    ],
+    "category": "Smart Watch",
+    "seller": "OnePlus",
+    "stock": 20,
+    "numOfReviews": 98,
+    "reviews": []
+  },
+  {
+    "name": "Fastrack Revoltt FS1 Pro",
+    "price": 2799.00,
+    "description": "1.96-inch Super AMOLED display, Bluetooth calling, 110+ sports modes, SpO2 & heart rate tracking, Fast charge support.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "image": "/images/smartwatches/fastrack_revoltt_fs1_pro.jpg"
+      }
+    ],
+    "category": "Smart Watch",
+    "seller": "Fastrack",
+    "stock": 20,
+    "numOfReviews": 88,
+    "reviews": []
+  },
+  {
+    "name": "Realme Watch 3 Pro",
+    "price": 3999.00,
+    "description": "1.78-inch AMOLED display, GPS support, AI noise cancellation calling, 110+ sports modes, SpO2, heart rate, 10-day battery.",
+    "ratings": 4.3,
+    "images": [
+      {
+        "image": "/images/smartwatches/realme_watch_3_pro.jpg"
+      }
+    ],
+    "category": "Smart Watch",
+    "seller": "Realme",
+    "stock": 20,
+    "numOfReviews": 110,
+    "reviews": []
+  },
+  {
+    "name": "Garmin Venu 3",
+    "price": 49990.00,
+    "description": "1.4-inch AMOLED display, advanced health metrics, sleep coaching, ECG app, GPS, Gorilla Glass 3, Garmin Connect support.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "image": "/images/smartwatches/garmin_venu_3.jpg"
+      }
+    ],
+    "category": "Smart Watch",
+    "seller": "Garmin",
+    "stock": 20,
+    "numOfReviews": 65,
+    "reviews": []
+  },
+   
+  {
+    "name": "Apple AirPods Pro (2nd Gen)",
+    "price": 24990.00,
+    "description": "Active Noise Cancellation, Transparency mode, Adaptive Audio, MagSafe Charging Case, Spatial Audio, Bluetooth 5.3.",
+    "ratings": 4.8,
+    "images": [
+      {
+        "image": "/images/earbuds/apple_airpods_pro_2.jpg"
+      }
+    ],
+    "category": "Ear Buds",
+    "seller": "Apple",
+    "stock": 10,
+    "numOfReviews": 350,
+    "reviews": []
+  },
+  {
+    "name": "Samsung Galaxy Buds2 Pro",
+    "price": 17999.00,
+    "description": "24-bit Hi-Fi Audio, Intelligent ANC, 360 Audio, IPX7 water resistance, Bluetooth 5.3, up to 18-hour playtime with case.",
+    "ratings": 4.6,
+    "images": [
+      {
+        "image": "/images/earbuds/samsung_buds2_pro.jpg"
+      }
+    ],
+    "category": "Ear Buds",
+    "seller": "Samsung",
+    "stock": 12,
+    "numOfReviews": 260,
+    "reviews": []
+  },
+  {
+    "name": "Sony WF-1000XM5",
+    "price": 24990.00,
+    "description": "Industry-leading noise cancellation, Integrated Processor V2, LDAC support, multipoint connection, 24-hour battery life.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "image": "/images/earbuds/sony_wf_1000xm5.jpg"
+      }
+    ],
+    "category": "Ear Buds",
+    "seller": "Sony",
+    "stock": 8,
+    "numOfReviews": 310,
+    "reviews": []
+  },
+  {
+    "name": "boAt Airdopes 141 ANC",
+    "price": 1699.00,
+    "description": "ANC up to 32dB, ENx™ technology, 42 hours total playback, ASAP™ charge, IPX5 water resistance, Bluetooth v5.3.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "image": "/images/earbuds/boat_airdopes_141_anc.jpg"
+      }
+    ],
+    "category": "Ear Buds",
+    "seller": "boAt",
+    "stock": 18,
+    "numOfReviews": 190,
+    "reviews": []
+  },
+  {
+    "name": "Realme Buds Air 5 Pro",
+    "price": 4999.00,
+    "description": "ANC up to 50dB, Dual drivers, Hi-Res Audio certified, Dual device connection, 40-hour playback with case.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/images/earbuds/realme_buds_air_5_pro.jpg"
+      }
+    ],
+    "category": "Ear Buds",
+    "seller": "Realme",
+    "stock": 15,
+    "numOfReviews": 220,
+    "reviews": []
+  },
+  {
+    "name": "OnePlus Buds Pro 2",
+    "price": 11999.00,
+    "description": "Co-created with Dynaudio, Smart ANC, Spatial Audio, Bluetooth 5.3, Dual Connection, 39-hour battery with case.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/images/earbuds/oneplus_buds_pro_2.jpg"
+      }
+    ],
+    "category": "Ear Buds",
+    "seller": "OnePlus",
+    "stock": 9,
+    "numOfReviews": 175,
+    "reviews": []
+  },
+  {
+    "name": "Noise Buds X Prime",
+    "price": 1399.00,
+    "description": "50 hours of playtime, Quad Mic ENC, 10mm drivers, low latency mode, Instacharge, Bluetooth 5.3.",
+    "ratings": 4.1,
+    "images": [
+      {
+        "image": "/images/earbuds/noise_buds_x_prime.jpg"
+      }
+    ],
+    "category": "Ear Buds",
+    "seller": "Noise",
+    "stock": 17,
+    "numOfReviews": 110,
+    "reviews": []
+  },
+  {
+    "name": "Boult Audio Z40",
+    "price": 1499.00,
+    "description": "100 hours playtime, ENC Mic, BoomX bass tech, low latency gaming mode, IPX5, Bluetooth 5.3.",
+    "ratings": 4.0,
+    "images": [
+      {
+        "image": "/images/earbuds/boult_audio_z40.jpg"
+      }
+    ],
+    "category": "Ear Buds",
+    "seller": "Boult Audio",
+    "stock": 14,
+    "numOfReviews": 95,
+    "reviews": []
+  },
+  {
+    "name": "JBL Tune Buds",
+    "price": 4999.00,
+    "description": "JBL Pure Bass Sound, Active Noise Cancelling, Ambient Aware, TalkThru, 48-hour playtime, Bluetooth 5.3.",
+    "ratings": 4.3,
+    "images": [
+      {
+        "image": "/images/earbuds/jbl_tune_buds.jpg"
+      }
+    ],
+    "category": "Ear Buds",
+    "seller": "JBL",
+    "stock": 13,
+    "numOfReviews": 125,
+    "reviews": []
+  },
+  {
+    "name": "OPPO Enco Air 3 Pro",
+    "price": 3999.00,
+    "description": "Hi-Res Audio certified, ANC up to 49dB, 12.4mm drivers, up to 30 hours total playback, IP55 rated.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "image": "/images/earbuds/oppo_enco_air_3_pro.jpg"
+      }
+    ],
+    "category": "Ear Buds",
+    "seller": "OPPO",
+    "stock": 11,
+    "numOfReviews": 135,
+    "reviews": []
+  },
+   
+  {
+    "name": "Nokia 105 (2023)",
+    "price": 1499.00,
+    "description": "1.8-inch display, Wireless FM radio, 1000mAh battery, Torchlight, Built-in games, Dual SIM support.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "image": "/images/keypad_phones/nokia_105_2023.jpg"
+      }
+    ],
+    "category": "Keypad Phones",
+    "seller": "Nokia",
+    "stock": 15,
+    "numOfReviews": 85,
+    "reviews": []
+  },
+  {
+    "name": "Lava Hero 600",
+    "price": 999.00,
+    "description": "1.8-inch display, 800mAh battery, Call blink notification, Dual SIM, Torch, Hindi/English keypad.",
+    "ratings": 4.0,
+    "images": [
+      {
+        "image": "/images/keypad_phones/lava_hero_600.jpg"
+      }
+    ],
+    "category": "Keypad Phones",
+    "seller": "Lava",
+    "stock": 10,
+    "numOfReviews": 60,
+    "reviews": []
+  },
+  {
+    "name": "Samsung Guru Music 2",
+    "price": 2149.00,
+    "description": "2-inch screen, MP3 player, 800mAh battery, Dual SIM, 16GB expandable memory, FM radio.",
+    "ratings": 4.1,
+    "images": [
+      {
+        "image": "/images/keypad_phones/samsung_guru_music_2.jpg"
+      }
+    ],
+    "category": "Keypad Phones",
+    "seller": "Samsung",
+    "stock": 12,
+    "numOfReviews": 98,
+    "reviews": []
+  },
+  {
+    "name": "Micromax X413",
+    "price": 1199.00,
+    "description": "1.8-inch display, 1750mAh battery, Wireless FM, Torch, Digital camera, Dual SIM.",
+    "ratings": 3.9,
+    "images": [
+      {
+        "image": "/images/keypad_phones/micromax_x413.jpg"
+      }
+    ],
+    "category": "Keypad Phones",
+    "seller": "Micromax",
+    "stock": 9,
+    "numOfReviews": 45,
+    "reviews": []
+  },
+  {
+    "name": "Itel Power 410",
+    "price": 1399.00,
+    "description": "2.4-inch display, 2500mAh battery, Big LED Torch, Wireless FM, King voice, Dual SIM.",
+    "ratings": 4.0,
+    "images": [
+      {
+        "image": "/images/keypad_phones/itel_power_410.jpg"
+      }
+    ],
+    "category": "Keypad Phones",
+    "seller": "Itel",
+    "stock": 8,
+    "numOfReviews": 70,
+    "reviews": []
+  },
+  {
+    "name": "Karbonn K9 Staar",
+    "price": 1099.00,
+    "description": "1.8-inch display, 1000mAh battery, Torch, FM Radio, Digital camera, Dual SIM.",
+    "ratings": 3.8,
+    "images": [
+      {
+        "image": "/images/keypad_phones/karbonn_k9_staar.jpg"
+      }
+    ],
+    "category": "Keypad Phones",
+    "seller": "Karbonn",
+    "stock": 7,
+    "numOfReviews": 35,
+    "reviews": []
+  },
+  {
+    "name": "Lemon B189",
+    "price": 1199.00,
+    "description": "1.8-inch display, 1800mAh battery, Dual SIM, Wireless FM, LED torch, Expandable storage.",
+    "ratings": 3.9,
+    "images": [
+      {
+        "image": "/images/keypad_phones/lemon_b189.jpg"
+      }
+    ],
+    "category": "Keypad Phones",
+    "seller": "Lemon",
+    "stock": 5,
+    "numOfReviews": 28,
+    "reviews": []
+  },
+  {
+    "name": "I Kall K20",
+    "price": 899.00,
+    "description": "1.8-inch display, 1000mAh battery, Dual SIM, Torch, FM Radio, Auto Call Recorder.",
+    "ratings": 3.7,
+    "images": [
+      {
+        "image": "/images/keypad_phones/ikall_k20.jpg"
+      }
+    ],
+    "category": "Keypad Phones",
+    "seller": "I Kall",
+    "stock": 11,
+    "numOfReviews": 42,
+    "reviews": []
+  },
+  {
+    "name": "Forme N5+ Selfie",
+    "price": 1199.00,
+    "description": "2.4-inch screen, Selfie camera, 1050mAh battery, Wireless FM, Expandable storage, Dual SIM.",
+    "ratings": 4.0,
+    "images": [
+      {
+        "image": "/images/keypad_phones/forme_n5_plus.jpg"
+      }
+    ],
+    "category": "Keypad Phones",
+    "seller": "Forme",
+    "stock": 6,
+    "numOfReviews": 33,
+    "reviews": []
+  },
+  {
+    "name": "Kechaoda K112",
+    "price": 1190.00,
+    "description": "2.4-inch display, 1800mAh battery, Dual SIM, MP3/MP4 player, Torch, Camera, Bluetooth.",
+    "ratings": 3.9,
+    "images": [
+      {
+        "image": "/images/keypad_phones/kechaoda_k112.jpg"
+      }
+    ],
+    "category": "Keypad Phones",
+    "seller": "Kechaoda",
+    "stock": 4,
+    "numOfReviews": 25,
+    "reviews": []
+  },
+   
+  {
+    "name": "JBL Flip 6",
+    "price": 12999.00,
+    "description": "Portable Bluetooth speaker with 12 hours of playtime, IP67 waterproof, and dustproof, JBL Original Pro Sound, Bass Radiators.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "image": "/images/bluetooth_speakers/jbl_flip_6.jpg"
+      }
+    ],
+    "category": "Bluetooth Speaker",
+    "seller": "JBL",
+    "stock": 15,
+    "numOfReviews": 220,
+    "reviews": []
+  },
+  {
+    "name": "Sony SRS-XB43 Extra Bass",
+    "price": 16990.00,
+    "description": "Portable Bluetooth speaker with extra bass, 24 hours battery life, IP67 waterproof, and dustproof, Party Connect feature.",
+    "ratings": 4.6,
+    "images": [
+      {
+        "image": "/images/bluetooth_speakers/sony_srs_xb43.jpg"
+      }
+    ],
+    "category": "Bluetooth Speaker",
+    "seller": "Sony",
+    "stock": 12,
+    "numOfReviews": 180,
+    "reviews": []
+  },
+  {
+    "name": "Bose SoundLink Flex",
+    "price": 15990.00,
+    "description": "Bluetooth speaker with deep, clear sound, IP67 rating, waterproof, dustproof, and rustproof, rugged and ultra-portable design.",
+    "ratings": 4.8,
+    "images": [
+      {
+        "image": "/images/bluetooth_speakers/bose_soundlink_flex.jpg"
+      }
+    ],
+    "category": "Bluetooth Speaker",
+    "seller": "Bose",
+    "stock": 10,
+    "numOfReviews": 130,
+    "reviews": []
+  },
+  {
+    "name": "Marshall Emberton",
+    "price": 12990.00,
+    "description": "Portable Bluetooth speaker with 20+ hours of playtime, Multi-directional sound, IPX7 waterproof, Bluetooth 5.0.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/images/bluetooth_speakers/marshall_emberton.jpg"
+      }
+    ],
+    "category": "Bluetooth Speaker",
+    "seller": "Marshall",
+    "stock": 8,
+    "numOfReviews": 110,
+    "reviews": []
+  },
+  {
+    "name": "Ultimate Ears BOOM 3",
+    "price": 13990.00,
+    "description": "Portable Bluetooth speaker with 360-degree sound, IP67 waterproof and dustproof, 15 hours of playtime, One-touch music control.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "image": "/images/bluetooth_speakers/ue_boom_3.jpg"
+      }
+    ],
+    "category": "Bluetooth Speaker",
+    "seller": "Ultimate Ears",
+    "stock": 18,
+    "numOfReviews": 145,
+    "reviews": []
+  },
+  {
+    "name": "Anker Soundcore 2",
+    "price": 4999.00,
+    "description": "Bluetooth speaker with 24 hours of playtime, 66 feet Bluetooth range, IPX7 waterproof, and bass up technology.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/images/bluetooth_speakers/anker_soundcore_2.jpg"
+      }
+    ],
+    "category": "Bluetooth Speaker",
+    "seller": "Anker",
+    "stock": 5,
+    "numOfReviews": 75,
+    "reviews": []
+  },
+  {
+    "name": "JBL Charge 5",
+    "price": 19990.00,
+    "description": "Portable Bluetooth speaker with 20 hours of playtime, IP67 waterproof, and dustproof, JBL Bass Radiators.",
+    "ratings": 4.8,
+    "images": [
+      {
+        "image": "/images/bluetooth_speakers/jbl_charge_5.jpg"
+      }
+    ],
+    "category": "Bluetooth Speaker",
+    "seller": "JBL",
+    "stock": 12,
+    "numOfReviews": 185,
+    "reviews": []
+  },
+  {
+    "name": "Sony SRS-XB33 Extra Bass",
+    "price": 14990.00,
+    "description": "Portable Bluetooth speaker with extra bass, 24 hours battery life, IP67 waterproof, dustproof, and shockproof.",
+    "ratings": 4.6,
+    "images": [
+      {
+        "image": "/images/bluetooth_speakers/sony_srs_xb33.jpg"
+      }
+    ],
+    "category": "Bluetooth Speaker",
+    "seller": "Sony",
+    "stock": 17,
+    "numOfReviews": 160,
+    "reviews": []
+  },
+  {
+    "name": "Tribit StormBox Pro",
+    "price": 15990.00,
+    "description": "Bluetooth speaker with 24 hours playtime, IP67 waterproof, dustproof, and shockproof, powerful bass and clear sound.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/images/bluetooth_speakers/tribit_stormbox_pro.jpg"
+      }
+    ],
+    "category": "Bluetooth Speaker",
+    "seller": "Tribit",
+    "stock": 6,
+    "numOfReviews": 90,
+    "reviews": []
+  },
+  {
+    "name": "Bose Portable Smart Speaker",
+    "price": 24990.00,
+    "description": "Smart Bluetooth speaker with 12 hours of battery life, Voice control, IPX4 rating, 360-degree sound.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "image": "/images/bluetooth_speakers/bose_portable_smart.jpg"
+      }
+    ],
+    "category": "Bluetooth Speaker",
+    "seller": "Bose",
+    "stock": 14,
+    "numOfReviews": 155,
+    "reviews": []
   }
+ 
+ 
+ 
+ 
+ 
+ 
+
 ]

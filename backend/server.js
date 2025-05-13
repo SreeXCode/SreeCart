@@ -2,9 +2,23 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const path = require('path');
 const cookieParser = require("cookie-parser");
 const cors = require('cors');
+const multer = require("multer");
+const path = require('path');
+
+// Multer Setup
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, path.join(__dirname, 'uploads', 'user'));
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + '-' + file.originalname);
+    }
+});
+
+const upload = multer({ storage });
+
 
 
 const { isAuthenticatedUser, authorizeRoles } = require("./middlewares/authenticate"); // Import middleware
@@ -30,6 +44,19 @@ app.use(cors(corsOptions));
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
+app.use("/uploads", express.static(path.join(__dirname, 'uploads')));
+
+
+
+// Athentication Route
+app.get("/AuthenticatedUser", isAuthenticatedUser, (req, res) => {
+    const user = req.user
+    res.status(200).json({
+        success: true,
+        authenticated: true,
+        user
+    });
+});
 
 //////////////////////////////////////////////////////////////////////////////////////
 // PRODUCTS ROUTES
@@ -51,10 +78,10 @@ const qs = require('qs');// Query String ➜ Object (Parsing)
 app.set('query parser', str => qs.parse(str));
 
 app.get('/products', async (req, res) => {
-    try { 
-        
+    try {
+
         const { keyword, category, price, pageNo } = req.query;
-        console.log('req.query',req.query); // should be { gte: "50000" }
+        console.log('req.query', req.query); // should be { gte: "50000" }
 
         // Generate the search query
         const searchQuery = getSearchQuery(keyword, category, price);
@@ -170,9 +197,16 @@ const User = require('../backend/models/userModel')
 const bcrypt = require('bcrypt');
 
 // Register 
-app.post('/register', async (req, res) => {
+app.post('/register', upload.single('avatar'), async (req, res) => {
     try {
-        const { name, email, password, avatar } = req.body;
+        const { name, email, password } = req.body;
+
+        let avatar
+        if (req.file) {
+            //image URL path 
+            avatar = `${req.protocol}://${req.get('host')}/uploads/user/${req.file.filename}`
+
+        }
 
         const user = await User.create({
             name,
@@ -182,11 +216,19 @@ app.post('/register', async (req, res) => {
         });
 
         const token = user.getJwtToken()
+        console.log('token', token)
+
+        // Set token in HTTP-only cookie
+        res.cookie("token", token, {
+            httpOnly: true, // Prevents access via JavaScript (XSS protection)
+            secure: process.env.NODE_ENV === "production", // Send only over HTTPS in production
+            sameSite: "Strict", // Prevents CSRF attacks
+            expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) // Expire in 7 days
+        });
 
         res.status(201).json({
             success: true,
             user,
-            token
         });
 
     } catch (error) {
@@ -280,7 +322,8 @@ const crypto = require("crypto");
 // Forgot Password 
 app.post('/password/forgot', async (req, res) => {
     try {
-        const user = await User.findOne({ email: req.body.email });
+        const {email} = req.body
+        const user = await User.findOne({ email});
         if (!user) {
             return res.status(404).json({ success: false, message: 'User not found with this email' });
         }
@@ -289,14 +332,14 @@ app.post('/password/forgot', async (req, res) => {
         console.log('reset token raw :', resetToken)
         await user.save({ validateBeforeSave: false });
 
-        // Create reset URL
-        const resetUrl = `${req.protocol}://${req.get('host')}/password/reset/${resetToken}`;
+        // Create reset URL (http://localhost:3000/password/reset/9a7ccf6f0bd3c5fcc41bca082c6c12dc17b72cd9)
+       const resetUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}`;
 
-        const message = `Your password reset URL is as follows:\n\n${resetUrl}\n\n
+        const message = `Your password reset URL is as follows:\n\n${resetUrl}\n\n 
                          If you have not requested this email, please ignore it.`;
 
         await sendEmail({ email: user.email, subject: "SreeCart Password Recovery", message });
-        res.status(200).json({ success: true, message: `Email sent to ${user.email}` });
+        res.status(200).json({ success: true, message: `Email sent to ${user.email}`, resetToken});
 
     } catch (error) {
         console.error("Error in forgot password: ", error);
@@ -347,8 +390,7 @@ app.post('/password/reset/:token', async (req, res) => {
         // ✅ **Fix: Send a response after setting the cookie**
         res.status(200).json({
             success: true,
-            message: "Password has been reset successfully",
-            token
+            message: "Password Reset successfully",
         });
 
     } catch (error) {
@@ -389,11 +431,11 @@ app.get('/myprofile', isAuthenticatedUser, async (req, res) => {
 app.put('/password/change', isAuthenticatedUser, async (req, res) => {
 
     try {
-        const { OldPassword, NewPassword } = req.body
+        const { oldPassword, newPassword } = req.body
         const user = await User.findById(req.user.id).select('+password')
 
         // Compare the entered old password with the stored old hashed password
-        const isMatch = await bcrypt.compare(OldPassword, user.password);
+        const isMatch = await bcrypt.compare(oldPassword, user.password)
         if (!isMatch) {
             return res.status(401).json({
                 success: false,
@@ -402,7 +444,7 @@ app.put('/password/change', isAuthenticatedUser, async (req, res) => {
         }
 
         //Assigning new password
-        user.password = NewPassword
+        user.password = newPassword
         await user.save()
 
         res.status(200).json({
@@ -424,24 +466,29 @@ app.put('/password/change', isAuthenticatedUser, async (req, res) => {
 
 // Update Profile
 const validator = require("validator");
-app.put('/profile/update', isAuthenticatedUser, async (req, res) => {
+app.put('/profile/update', isAuthenticatedUser, upload.single('avatar'), async (req, res) => {
     try {
-        const newUserData = {
-            name: req.body.name,
-            email: req.body.email
-        }
-        console.log(newUserData)
+        const { name, email } = req.body;
 
         // Validate email format
-        if (!validator.isEmail(newUserData.email)) {
+        if (!validator.isEmail(email)) {
             return res.status(400).json({
                 success: false,
                 message: "Invalid email format.",
             });
         }
 
+        const newUserData = {
+            name,
+            email,
+        };
+        if (req.file) {
+            newUserData.avatar = `${req.protocol}://${req.get('host')}/uploads/user/${req.file.filename}`;
+        }
+        console.log('newUserData', newUserData)
+
         // Find user and update
-        const user = await User.findByIdAndUpdate(req.user.id, newUserData, {
+        const user = await User.findByIdAndUpdate(req.user, newUserData, {
             new: true,
             runValidators: true
         });
@@ -899,6 +946,165 @@ app.delete('/review', async (req, res) => {
             message: "Internal server error",
             error: error.message
         });
+    }
+});
+
+/////////////////////////////////////////////////////////////
+//ADD TO CART
+
+app.post('/cart/add', isAuthenticatedUser, async (req, res) => {
+    let { productId, quantity } = req.body;
+    const userId = req.user.id; // from isAuthenticatedUser
+
+    // Ensure quantity is a number
+    quantity = parseInt(quantity);
+    if (!quantity || quantity < 1) {
+        return res.status(400).json({ message: 'Invalid quantity.' });
+    }
+
+    try {
+        const product = await Product.findById(productId);
+        // console.log('product',product)
+        if (!product) return res.status(404).json({ message: 'Product not found.' });
+
+        const user = await User.findById(userId);
+        // console.log('user',user)
+        if (!user) return res.status(404).json({ message: 'User not found.' });
+
+        // Macth the product id return the product index position where userschema cart item index number
+        const existingItemIndex = user.cartItems.findIndex(
+            item => item.productId.toString() === productId
+        );
+        console.log('existingItemIndex',existingItemIndex)
+
+        if (existingItemIndex > -1) {
+            const existingQuantity = user.cartItems[existingItemIndex].quantity;
+            const totalQuantity = existingQuantity + quantity;
+
+            if (totalQuantity > product.stock) {
+                return res.status(400).json({
+                    message: `Only ${product.stock - existingQuantity} more item(s) can be added to cart.`
+                });
+            }
+
+            user.cartItems[existingItemIndex].quantity = totalQuantity;
+        } else {
+            if (quantity > product.stock) {
+                return res.status(400).json({
+                    message: `Only ${product.stock} item(s) available in stock.`
+                });
+            }
+
+            user.cartItems.push({
+                productId: product._id,
+                quantity
+            });
+        }
+
+        await user.save();
+        res.status(200).json({ message: 'Item added to cart successfully.' });
+
+    } catch (err) {
+        res.status(500).json({ message: 'Internal server error.', error: err.message });
+    }
+});
+
+// GET /cart - Get all cart items with populated product details
+app.get('/cart', isAuthenticatedUser, async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id).populate('cartItems.productId');
+        if (!user) {
+            return res.status(404).json({ message: 'User not found.' });
+        }
+
+        const cartItems = user.cartItems.map(item => {
+            const product = item.productId;
+
+            // If product was deleted but still in cart
+            if (!product) return null;
+
+            return {
+                _id: product._id,
+                name: product.name,
+                price: product.price,
+                images: product.images,
+                stock: product.stock,
+                quantity: item.quantity
+            };
+        }).filter(Boolean); // remove null entries
+
+        console.log('cartItems',cartItems)
+
+        res.status(200).json({ cartItems });
+    } catch (err) {
+        res.status(500).json({ message: 'Internal server error.', error: err.message });
+    }
+});
+
+
+
+app.post('/cart/update', isAuthenticatedUser, async (req, res) => {
+    const { productId, quantity } = req.body;
+    const userId = req.user.id;
+
+    if (!quantity || quantity < 1) {
+        return res.status(400).json({ message: 'Invalid quantity.' });
+    }
+
+    try {
+        const product = await Product.findById(productId);
+        if (!product) return res.status(404).json({ message: 'Product not found.' });
+
+        if (quantity > product.stock) {
+            return res.status(400).json({ message: `Only ${product.stock} item(s) available.` });
+        }
+
+        const user = await User.findById(userId);
+        if (!user) return res.status(404).json({ message: 'User not found.' });
+
+        const item = user.cartItems.find(item => item.productId.toString() === productId);
+        if (!item) return res.status(404).json({ message: 'Cart item not found.' });
+
+        item.quantity = quantity;
+        await user.save();
+
+        res.status(200).json({ message: 'Cart updated successfully.' });
+    } catch (err) {
+        res.status(500).json({ message: 'Internal server error.', error: err.message });
+    }
+});
+
+app.post('/cart/remove', isAuthenticatedUser, async (req, res) => {
+    const { productId } = req.body;
+    const userId = req.user.id;
+
+    try {
+        const user = await User.findById(userId);
+        if (!user) return res.status(404).json({ message: 'User not found.' });
+
+        user.cartItems = user.cartItems.filter(
+            item => item.productId.toString() !== productId
+        );
+
+        await user.save();
+        res.status(200).json({ message: 'Item removed from cart.' });
+    } catch (err) {
+        res.status(500).json({ message: 'Internal server error.', error: err.message });
+    }
+});
+
+app.post('/cart/apply-coupon', (req, res) => {
+    const { code } = req.body;
+    const coupons = {
+        'SAVE1000': 2000,
+        'DISCOUNT4000': 4000,
+        'WELCOME500':500
+    };
+
+    if (coupons[code]) {
+        return res.json({ valid: true, discountAmount: coupons[code] });
+    } else {
+        return res.json({ valid: false });
     }
 });
 

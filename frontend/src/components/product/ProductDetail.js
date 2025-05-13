@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import axios from 'axios';
-
 import { Carousel } from 'react-bootstrap'
 
 function ProductDetails() {
@@ -10,6 +9,32 @@ function ProductDetails() {
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
+    const [quantity, setQuantity] = useState(1);
+
+    const handleAddToCart = async () => {
+        try {
+            // Optional: get JWT token if you're using it from localStorage or cookies
+            const response = await axios.post(
+                'http://localhost:8000/cart/add',
+                {
+                    productId: product._id,
+                    quantity: quantity
+                },
+                {
+                    withCredentials: true // if your backend uses cookie-based auth
+                }
+            );
+
+            alert(response.data.message || "Item added to cart!");
+
+        } catch (err) {
+            if (err.response && err.response.data && err.response.data.message) {
+                alert(err.response.data.message);
+            } else {
+                alert("Failed to add item to cart");
+            }
+        }
+    };
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -85,21 +110,40 @@ function ProductDetails() {
                     <p id="product_price">₹{product.price}</p>
 
                     <div className="stockCounter d-inline">
-                        <span className="btn btn-danger minus">-</span>
+
+                        <span
+                            className={`btn btn-danger minus ${quantity <= 1 ? 'disabled' : ''}`}
+                            onClick={() => setQuantity(prev => (prev > 1 ? prev - 1 : prev))}
+                        >
+                            -
+                        </span>
 
                         <input
                             type="number"
                             className="form-control count d-inline"
-                            value="1"
+                            value={quantity}
                             readOnly
                         />
 
-                        <span className="btn btn-primary plus">+</span>
+                        <span
+                            className={`btn btn-primary plus ${quantity >= product.stock ? 'disabled' : ''}`}
+                            onClick={() => setQuantity(prev => (prev < product.stock ? prev + 1 : prev))}
+                        >
+                            +
+                        </span>
+
                     </div>
 
-                    <button type="button" id="cart_btn" className="btn btn-primary d-inline ml-4">
+                    <button
+                        type="button"
+                        id="cart_btn"
+                        className="btn btn-primary d-inline ml-4"
+                        disabled={product.stock === 0}
+                        onClick={handleAddToCart}
+                    >
                         Add to Cart
                     </button>
+
 
                     <hr />
 

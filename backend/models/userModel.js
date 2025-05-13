@@ -24,12 +24,25 @@ const userSchema = new mongoose.Schema({
     },
     avatar: {
         type: String,
-        required: true
     },
     role: {
         type: String,
         default: 'user'
     },
+    cartItems: [
+        {
+            productId: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'Product',
+                required: true
+            },
+            quantity: {
+                type: Number,
+                required: true,
+                min: 1
+            }
+        }
+    ],
     resetPasswordToken: {
         type: String
     },
@@ -69,11 +82,6 @@ userSchema.methods.getResetToken = function () {
 
     return token
 }
-
-
-
-
-
 
 const User = mongoose.model('User', userSchema);
 module.exports = User;

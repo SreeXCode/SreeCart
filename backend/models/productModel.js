@@ -38,6 +38,8 @@ const productSchema = new mongoose.Schema({
                 'Television',
                 'Smart Watch',
                 'Ear Buds',
+                'Keypad Phones',
+                'Bluetooth Speaker'
             ],
             message: "Please select correct category"
         }
